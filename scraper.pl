@@ -94,11 +94,3 @@ sub get_root {
 	$tree->parse(decode_utf8($data));
 	return $tree->elementify;
 }
-
-# Removing trailing whitespace.
-sub remove_trailing {
-	my $string_sr = shift;
-	${$string_sr} =~ s/^\s*//ms;
-	${$string_sr} =~ s/\s*$//ms;
-	return;
-}

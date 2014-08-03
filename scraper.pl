@@ -19,7 +19,7 @@ use Time::Local;
 $OUTPUT_AUTOFLUSH = 1;
 
 # Certificate.
-$ENV{'HTTPS_CA_FILE'} = "/usr/share/ca-certificates/cacert.org/cacert.org.crt";
+$ENV{'PERL_LWP_SSL_VERIFY_HOSTNAME'} = 0;
 
 # URI of service.
 my $base_uri = URI->new('https://uverejnovani.cz/profiles/details/statutarni-mesto-brno-mestska-cast-brno-sever');

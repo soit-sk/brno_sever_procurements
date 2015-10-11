@@ -15,6 +15,9 @@ use POSIX qw(strftime);
 use URI;
 use Time::Local;
 
+# Version.
+our $VERSION = 0.02;
+
 # Don't buffer.
 $OUTPUT_AUTOFLUSH = 1;
 

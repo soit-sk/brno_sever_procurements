@@ -1,4 +1,4 @@
-0.02
+0.02 2015-10-11T12:09:15+02:00
  - Add version.
  - Fix parsing of date (they adds second).
  - Fix skipping of ssl certificate.

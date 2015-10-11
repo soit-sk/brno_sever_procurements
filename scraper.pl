@@ -21,9 +21,6 @@ our $VERSION = 0.02;
 # Don't buffer.
 $OUTPUT_AUTOFLUSH = 1;
 
-# Certificate.
-$ENV{'PERL_LWP_SSL_VERIFY_HOSTNAME'} = 0;
-
 # URI of service.
 my $base_uri = URI->new('https://uverejnovani.cz/profiles/details/statutarni-mesto-brno-mestska-cast-brno-sever');
 
@@ -36,6 +33,10 @@ my $dt = Database::DumpTruck->new({
 # Create a user agent object.
 my $ua = LWP::UserAgent->new(
 	'agent' => 'Mozilla/5.0',
+);
+$ua->ssl_opts(
+	'verify_hostname' => 0,
+	'SSL_verify_mode' => 0x00,
 );
 
 # Get base root.

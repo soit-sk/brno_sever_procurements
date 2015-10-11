@@ -77,9 +77,9 @@ foreach my $tr (@tr) {
 # Get DB date from web datetime.
 sub get_db_datetime {
 	my $datetime = shift;
-	my ($day, $mon, $year, $hour, $min) = $datetime
-		=~ m/^\s*(\d+)\.(\d+)\.(\d+)\s+(\d+):(\d+)\s*$/ms;
-	my $time = timelocal(0, $min, $hour, $day, $mon - 1, $year - 1900);
+	my ($day, $mon, $year, $hour, $min, $sec) = $datetime
+		=~ m/^\s*(\d+)\.(\d+)\.(\d+)\s+(\d+):(\d+):(\d+)\s*$/ms;
+	my $time = timelocal($sec, $min, $hour, $day, $mon - 1, $year - 1900);
 	return strftime('%Y-%m-%d', localtime($time));
 }
 

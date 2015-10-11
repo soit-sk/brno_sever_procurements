@@ -1,5 +1,6 @@
 0.02
  - Add version.
+ - Fix parsing of date (they adds second).
  - Update copyright years.
 
 0.01 2014-08-03T14:28:01+02:00
